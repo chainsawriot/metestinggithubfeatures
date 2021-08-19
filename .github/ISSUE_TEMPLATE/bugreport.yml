@@ -1,19 +1,25 @@
-name: 🐞 Bug
+name: Bug
 description: File a bug/issue
 title: "[BUG] <title>"
 labels: [Bug, Needs Triage]
 body:
 - type: checkboxes
   attributes:
-    label: Is there an existing issue for this?
-    description: Please search to see if an issue already exists for the bug you encountered.
+    label: Please confirm the following
+    description: If you cannot check most of the boxes below,  it is probably not a bug. Please consider using discussion instead.
     options:
     - label: I have searched the existing issues
       required: true
+    - label: The behaviour of the program is deviated from what is described in the documentation.
+      required: true
+    - label: I can reproduce this problem for more than one time.
+      required: true
+    - label: This is NOT a 3-digit error: it does not display an error message like: `something went wrong. Status code: 400.`
+    - label: This is a 3-digit error and I have consulted the [Understanding API errors](https://cran.r-project.org/web/packages/academictwitteR/vignettes/academictwitteR-errors.html) vignette and the suggestions do not help.
 - type: textarea
   attributes:
-    label: Current Behavior
-    description: A concise description of what you're experiencing.
+    label: Describe the bug
+    description: A clear and concise description of what the bug is.
   validations:
     required: false
 - type: textarea
@@ -21,39 +27,30 @@ body:
     label: Expected Behavior
     description: A concise description of what you expected to happen.
   validations:
-    required: false
+    required: true
 - type: textarea
   attributes:
     label: Steps To Reproduce
-    description: Steps to reproduce the behavior.
+    description: Please use `reprex::reprex()` to create an reproducible example, if possible.
     placeholder: |
-      1. In this environment...
-      2. With this config...
-      3. Run '...'
-      4. See error...
+      paste the output from `reprex::reprex()` here
+    render: markdown
   validations:
-    required: false
+    required: true
 - type: textarea
   attributes:
     label: Environment
-    description: |
-      examples:
-        - **OS**: Ubuntu 20.04
-        - **Node**: 13.14.0
-        - **npm**: 7.6.3
+    description: Please run `sessionInfo()` and copy the result here.
     value: |
-        - OS:
-        - Node:
-        - npm:
+      paste the output from `sessionInfo()` here
     render: markdown
   validations:
-    required: false
+    required: true
 - type: textarea
   attributes:
     label: Anything else?
     description: |
       Links? References? Anything that will give us more context about the issue you are encountering!
 
-      Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
   validations:
     required: false
