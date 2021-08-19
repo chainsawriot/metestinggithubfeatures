@@ -6,7 +6,7 @@ body:
 - type: checkboxes
   attributes:
     label: Please confirm the following
-    description: If you cannot check most of the boxes below,  it is probably not a bug. Please consider using discussion instead.
+    description: If you cannot check most of the boxes below, it is probably not a bug. Please consider using discussion instead.
     options:
     - label: I have searched the existing issues
       required: true
@@ -14,7 +14,7 @@ body:
       required: true
     - label: I can reproduce this problem for more than one time.
       required: true
-    - label: This is NOT a 3-digit error: it does not display an error message like: something went wrong. Status code: 400.
+    - label: This is NOT a 3-digit error\: it does not display an error message like\: `something went wrong. Status code\: 400.`
       required: false
     - label: This is a 3-digit error and I have consulted the [Understanding API errors](https://cran.r-project.org/web/packages/academictwitteR/vignettes/academictwitteR-errors.html) vignette and the suggestions do not help.
       required: false
