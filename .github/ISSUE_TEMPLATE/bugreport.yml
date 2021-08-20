@@ -43,7 +43,7 @@ body:
   attributes:
     label: Environment
     description: Please run `sessionInfo()` and copy the result here.
-    value: |
+    placeholder: |
       paste the output from `sessionInfo()` here
     render: markdown
   validations:
