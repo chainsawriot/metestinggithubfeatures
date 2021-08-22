@@ -33,7 +33,7 @@ body:
 - type: textarea
   attributes:
     label: Steps To Reproduce
-    description: Please use `reprex::reprex()` to create an reproducible example, if possible.
+    description: Please use `reprex::reprex()` to create [an reproducible example](https://reprex.tidyverse.org/), if possible.
     placeholder: |
       paste the output from `reprex::reprex()` here
     render: markdown
